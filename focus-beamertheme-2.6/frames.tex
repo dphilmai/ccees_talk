@@ -1,0 +1,254 @@
+
+    \begin{frame}
+        \maketitle
+    \end{frame}
+    
+    % Use starred version (e.g. \section*{Section name})
+    % to disable (sub)section page.
+    \section{Aufbau des Models}
+    
+    \begin{frame}{Graphennetzwerk}
+        Graph:
+        \begin{itemize}
+            \item Knoten: geographisch/ politisch getrennte Populationen
+            \item Kanten: Austausch zwischen Populatinen
+        \end{itemize}
+%        \includegraphics[scale=0.55]{sample_graph.pdf}
+    \end{frame}
+    
+
+    \begin{frame}{Population}
+
+         
+        \begin{itemize}
+            \item gut durchmischtes System 
+            \item 5 Kompartmente: 
+                \begin{itemize}
+                    \item S (susceptible)
+                    \item E (exposed)
+                    \item I (infected)
+                    \item R (recovered)
+                    \item D (deceased)
+                \end{itemize}  
+            \item SEIR Model: Übergang zwischen Kompartmenten
+        \end{itemize}
+
+    \end{frame}
+
+    
+
+    \begin{frame}{SEIR Model}
+        DGL Parameter: 
+        \begin{itemize}
+            \item Verbreitungsrate (Wahrscheinlichkeit Weitergabe)
+            \item Inkubationszeit
+            \item Krankheitsdauer
+            \item Fatalität 
+            \item demographische Parameter: Geburten- und Sterberate
+            \item Dauer bis Verlust von Immunität
+        \end{itemize}
+    
+    \end{frame}
+
+
+
+
+    
+    % \begin{frame}{Kanten}
+    % \begin{columns}[t, onlytextwidth]
+    %         \column{0.3\textwidth}
+    %                     Austauschgewichte
+    %                     \begin{itemize}
+    %                         \item abhängig vom Knoten
+    %                         \item abhängig vom Kompartment
+    %                     \end{itemize}
+
+            
+    %         \column{0.5\textwidth}
+            
+    %             \begin{figure}
+    %          \includegraphics[scale=0.35]{sample_graph.pdf}
+    %             \end{figure}
+    %     \end{columns}
+    % \end{frame}
+    
+    \begin{frame}{Kanten}
+        Austauschgewichte
+        \begin{itemize}
+            \item abhängig vom Knoten
+            \item abhängig vom Kompartment
+        \end{itemize}
+
+        \begin{figure}
+%            \includegraphics[scale=0.4]{sample_graph.pdf}
+        \end{figure}
+    \end{frame}
+
+
+    \begin{frame}{Paramterraum}
+        \begin{itemize}
+            \item Netzwerkgröße
+            \item Vernetzungsgrad
+            \item Netzwekstruktur
+            \item DGL Paramter
+            \item Initialisierung der Austauschparamter
+            \item Initialisierung der Anfangspopulationen
+        \end{itemize}
+    \end{frame}
+    
+    
+    \begin{frame}{Implementierte features}
+        \begin{itemize}
+            \item Lockdown
+            \item lokaler Lockdown
+            \item Impfung
+            \item konstante Infektionsquelle
+            \item einzelne Infektionsquelle 
+        \end{itemize}
+    \end{frame}
+
+    \section{Analyse}
+    
+    \begin{frame}{Erkunden des Systems}
+        \begin{itemize}
+            \item Vergleich der globalen Netzwerk Werte mit einem Referenzsystem
+            \item Ausbreitung der Krankheit im Netzwerk
+            \item \dots
+        \end{itemize}
+    \end{frame}
+    
+    
+    \begin{frame}{Vergleich der globalen Netzwerk Werte mit einem Referenzsystem}
+    Referenzsystem: 
+    \begin{itemize}
+        \item Anfangsbedingungen \newline 
+        = Addition der Populationen an den Knoten
+        \item DGL Paramter \newline 
+        =  Mittelwerte von den Knoten Parametern 
+    \end{itemize}
+    \end{frame}
+
+    
+    
+%     \begin{frame}[plain]{Plain frame}
+%         This is a frame with plain style and it is numbered.
+%     \end{frame}
+    
+    
+%     \begin{frame}{Ausbreitung der Krankheit im Netzwerk}
+        
+%     \end{frame}
+    
+%     \begin{frame}{Blocks}
+%         \begin{block}{Block}
+%             Text.
+%         \end{block}
+%         \pause
+%         \begin{alertblock}{Alert block}
+%             Alert \alert{text}.
+%         \end{alertblock}
+%         \pause
+%         \begin{exampleblock}{Example block}
+%             Example \textcolor{example}{text}.
+%         \end{exampleblock}
+%     \end{frame}
+    
+%     \begin{frame}{Lists}
+%         \begin{columns}[t, onlytextwidth]
+%             \column{0.33\textwidth}
+%                 Items:
+%                 \begin{itemize}
+%                     \item Item 1
+%                     \begin{itemize}
+%                         \item Subitem 1.1
+%                         \item Subitem 1.2
+%                     \end{itemize}
+%                     \item Item 2
+%                     \item Item 3
+%                 \end{itemize}
+            
+%             \column{0.33\textwidth}
+%                 Enumerations:
+%                 \begin{enumerate}
+%                     \item First
+%                     \item Second
+%                     \begin{enumerate}
+%                         \item Sub-first
+%                         \item Sub-second
+%                     \end{enumerate}
+%                     \item Third
+%                 \end{enumerate}
+            
+%             \column{0.33\textwidth}
+%                 Descriptions:
+%                 \begin{description}
+%                     \item[First] Yes.
+%                     \item[Second] No.
+%                 \end{description}
+%         \end{columns}
+%     \end{frame}
+
+
+% \setbeamertemplate{caption}[numbered]
+%     \begin{frame}{Figures and Tables}
+%         \begin{columns}
+%             \column{0.4\textwidth}
+%                 \begin{figure}
+%                     \centering
+%                     \includegraphics{focuslogo.pdf}
+%                     \caption{Figure caption.}
+%                     \label{fig:focuslogo}
+%                 \end{figure}
+                
+%             \column{0.6\textwidth}
+%                 \begin{table}
+%                     \centering
+%                     \begin{tabular}{rcc}
+%                          & Heading 1 & Heading 2 \\\hline
+%                         Row 1 & \(v_{11}\) & \(v_{12}\) \\
+%                         Row 2 & \(v_{21}\) & \(v_{22}\) \\
+%                         Row 3 & \(v_{31}\) & \(v_{32}\) \\
+%                     \end{tabular}
+%                     \caption{Table caption.}
+%                     \label{tab:demo}
+%                 \end{table}
+%         \end{columns}
+%     \end{frame}
+    
+%     \begin{frame}[focus]
+%         Thanks for using \textbf{Focus}!
+%     \end{frame}
+    
+%     \appendix
+%     \begin{frame}{References}
+%         \nocite{*}
+%         \bibliography{demo_bibliography}
+%         \bibliographystyle{plain}
+%     \end{frame}
+    
+%     \begin{frame}{Backup frame}
+%         \usebeamercolor[fg]{normal text}
+%         This is a backup frame, useful to include additional material for questions from the audience.
+%         \vfill
+%         The package \texttt{appendixnumberbeamer} is used not to number appendix frames.
+%     \end{frame}
+    
+    % \begin{frame}[t]
+    %     This frame has an empty title and is aligned to top.
+    % \end{frame}
+    
+
+    % \begin{frame}[noframenumbering]{No frame numbering}
+    %     This frame is not numbered and is citing reference \cite{knuth74}.
+    % \end{frame}
+    
+    % \begin{frame}{Typesetting and Math}
+    %     The packages \texttt{inputenc} and \texttt{FiraSans}\footnote{\url{https://fonts.google.com/specimen/Fira+Sans}}\textsuperscript{,}\footnote{\url{http://mozilla.github.io/Fira/}} are used to properly set the main fonts.
+    %     \vfill
+    %     This theme provides styling commands to typeset \emph{emphasized}, \alert{alerted}, \textbf{bold}, \textcolor{example}{example text}, \dots
+    %     \vfill
+    %     \texttt{FiraSans} also provides support for mathematical symbols:
+    %     \begin{equation*}
+    %         e^{i\pi} + 1 = 0.
+    %     \end{equation*}
+    % \end{frame}
