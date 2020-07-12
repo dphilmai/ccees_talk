@@ -536,6 +536,11 @@ INPUT ./figures/reversed_init_pop.pdf
 INPUT figures/init_weight_sweep.pdf
 INPUT ./figures/init_weight_sweep.pdf
 INPUT ./figures/init_weight_sweep.pdf
+INPUT figures/ERs_swinit_weight_rinf_rinits_rpop-wavecomp.pdf
+INPUT ./figures/ERs_swinit_weight_rinf_rinits_rpop-wavecomp.pdf
+INPUT ./figures/ERs_swinit_weight_rinf_rinits_rpop-wavecomp.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/fira/FiraSans-Italic-osf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/fira/FiraSans-Italic-osf-t1--base.tfm
 OUTPUT demo.nav
 OUTPUT demo.toc
 OUTPUT demo.snm

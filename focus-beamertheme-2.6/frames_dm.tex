@@ -30,15 +30,24 @@
                             \delta_{out} = 0.5$
                     \end{itemize}
             \end{itemize}
-        \item ...
     \end{itemize}
+    In Utopia sind Netzwerkgeneratoren über Boost Graph Library implementiert.
 \end{frame}
 \begin{frame}{Zusätzliche Eigenschaften}
-Daneben weitere Eigenschaften:
     \begin{itemize}
-        \item Initialisierung der Population auf Knoten (-> Exponentiell)
-        \item Kantengewichte
-        \item Randomisierung der Infektionsparameter auf Knoten
+        \item Initialisierung der Population auf Knoten 
+            \begin{itemize}
+                \item Standard: Exponentiell verteilte Population
+            \end{itemize}
+        \vfill\item<2-> Kantengewichte:
+            \begin{itemize}
+                \item Zufälliges Gewicht $w_{ij} = [0,$ \emph{init\_weight}$]$
+                \item Standard: \emph{init\_weight}$=0.01$
+            \end{itemize}
+        \vfill\item<2-> Randomisierung der Infektionsparameter auf Knoten
+            \begin{itemize}
+                \item Standard: $\beta$ randomisiert
+            \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -240,7 +249,19 @@ Daneben weitere Eigenschaften:
     \begin{figure}[htpb]
         \centering
         \includegraphics[width=1\linewidth]{init_weight_sweep.pdf}
-        \caption{}%
+        \caption{Erdos-Renyi für $\vertices = 40, \mdeg=2$. Standardeinstellungen.}%
         \label{fig:init_weight_sweep}
     \end{figure}
+\end{frame}
+\begin{frame}[t]
+\frametitle{Variierte Initialisierung der Kantengewichte}
+Vergleich der Infektionswellen (Proz. Abweichung: $I_{max}, T_{max}$):
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=0.8\linewidth]{ERs_swinit_weight_rinf_rinits_rpop-wavecomp.pdf}
+        \caption{Erdos-Renyi mit $\vertices = 50, \mdeg=2$. Standardeinstellung mit variierter
+        Initialisierung der Kantengewichte.}% 
+        \label{fig:ERs_swinit_weight_rinf_rinits_rpop-wavecomp}
+    \end{figure}
+    
 \end{frame}
