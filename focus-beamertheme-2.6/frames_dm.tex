@@ -9,7 +9,7 @@
 \begin{frame}[t]{Netzwerktopologien} 
     Verschiedene Modelle zur Erzeugung von zufälligen Netzwerken:
     \begin{itemize}
-        \item Erdos-Renyi
+        \item<1> Erdos-Renyi
             \begin{itemize}
             \item Parameter:
                 \begin{itemize}
@@ -20,7 +20,7 @@
             \item $\medges = \frac{\vertices \mdeg}{2}$
             \item Small World Eigenschaft
         \end{itemize}
-        \item Bollobas-Riordan
+        \item<2-> Bollobas-Riordan
             \begin{itemize}
                 \item Skalenfreies Netzwerk: $p_k \sim k^{-\gamma}$
                 \item Momente $<k^{\gamma -1}>$ größer $\gamma - 1$ von $p_k$ sind nicht endlich
@@ -44,7 +44,7 @@
                 \item Zufälliges Gewicht $w_{ij} = [0,$ \emph{init\_weight}$]$
                 \item Standard: \emph{init\_weight}$=0.01$
             \end{itemize}
-        \vfill\item<2-> Randomisierung der Infektionsparameter auf Knoten
+        \vfill\item<3-> Randomisierung der Infektionsparameter auf Knoten
             \begin{itemize}
                 \item Standard: $\beta$ randomisiert
             \end{itemize}
@@ -52,7 +52,20 @@
 \end{frame}
 
 \subsection{Erdos-Renyi}
-
+\begin{frame}[t]
+    \frametitle{Erdos-Renyi: Netzwerk}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=0.8\linewidth]{ER_migration_network_40-2.pdf}
+        \caption{Erdos-Renyi Netzwerk mit $\vertices = 40, \mdeg = 2$ für den letzten
+        simulierten Zeitpunkt ($t= 10^{4}$)}%
+        \label{fig:ER_migration_network_40-2}
+    \end{figure}
+\end{frame}
+\begin{frame}[c]
+    \frametitle{Erdos-Renyi: Netzwerkdynamik}
+    Simulation: \href{run:/figures/animations/ER_animation_40-2.mp4}{Erdos-Renyi Derivative Network Animation}
+\end{frame}
 \begin{frame}[t]
     \frametitle{Erdos-Renyi: Knotenanzahl}
     Gesamtpopulation für variierte Knotenanzahl $\vertices = 12, 100$: 
@@ -143,6 +156,20 @@
 \end{frame}
 
 \subsection{Bollobas-Riordan}
+\begin{frame}[t]
+    \frametitle{Bollobas-Riordan: Netzwerk}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=0.8\linewidth]{BR_migration_network_40-2.pdf}
+        \caption{Bollobas-Riordan Netzwerk mit $\vertices = 40, \mdeg = 2$ für den letzten
+        simulierten Zeitpunkt ($t= 10^{4}$)}%
+        \label{fig:BR_migration_network_40-2}
+    \end{figure}
+\end{frame}
+\begin{frame}[c]
+    \frametitle{Bollobas-Riordan: Netzwerkdynamik}
+    Simulation: \href{run:/figures/animations/BR_animation_40-2.mp4}{Bollobas-Riordan Derivative Network Animation}
+\end{frame}
 \begin{frame}[t]
     \frametitle{Bollobas-Riordan}
     \begin{figure}[htpb]
@@ -262,6 +289,43 @@ Vergleich der Infektionswellen (Proz. Abweichung: $I_{max}, T_{max}$):
         \caption{Erdos-Renyi mit $\vertices = 50, \mdeg=2$. Standardeinstellung mit variierter
         Initialisierung der Kantengewichte.}% 
         \label{fig:ERs_swinit_weight_rinf_rinits_rpop-wavecomp}
+    \end{figure}
+\end{frame}
+\begin{frame}[t]
+    \frametitle{Variierte Mobilität von Infizierten}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}[htpb]
+                \centering
+                \includegraphics[width=0.8\linewidth]{ERs_swi_weight_totpop.pdf}
+                \caption{Erdos-Renyi mit $\vertices=50, \mdeg=2$ und \emph{i\_weight}$=0.1$.}%
+                \label{fig:ERs_swi_weight_totpop}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}[htpb]
+                \centering
+                \includegraphics[width=0.8\linewidth]{ERs_swi_weight_totpop_1.pdf}
+                \caption{Erdos-Renyi mit $\vertices=50, \mdeg=2$ und \emph{i\_weight} $=0.5$.}%
+                \label{fig:ERs_swi_weight_totpop_05}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    \begin{itemize}
+        \item Eingeschränkte Mobilität von Infizierten lässt Dynamik im Wesentlichen unverändert
+        \item Leichte Abweichungen zu Referenzmodell sind beobachtbar
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Variierte Mobilität von Infizierten}
+    Vergleich der Infektionswellen (Proz. Abweichung: $I_{max}, T_{max}$):
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=0.8\linewidth]{ERs_swinf_weight_rinf_rinits_rpop-wavecomp.pdf}
+        \caption{Erdos-Renyi für $\vertices = 50, \mdeg=2$. Standardeinstellungen mit Sweep über die
+        Gewichtung der Infizierten.}%
+        \label{fig:ERs_swinf_weight_rinf_rinits_rpop-wavecomp}
     \end{figure}
     
 \end{frame}
